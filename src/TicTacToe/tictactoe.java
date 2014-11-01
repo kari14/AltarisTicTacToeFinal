@@ -1,5 +1,9 @@
 package TicTacToe;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class tictactoe
 {
 	public char turn;
@@ -37,6 +41,22 @@ public class tictactoe
 			turn = 'X';
 		}
 		return new tictactoe(newGrid, turn);
+	}
+	public Integer[] possibleCMPMove()
+	{
+		List<Integer> l = new LinkedList<Integer>();
+		int counter = 0;
+		while(counter < grid.length)
+		{
+			if(grid[counter] == ' ')
+			{
+				l.add(counter);
+			}
+			counter++;
+		}
+		Integer[] arr = new Integer[(l.size())];
+	
+		return l.toArray(arr); 
 	}
 	
 	

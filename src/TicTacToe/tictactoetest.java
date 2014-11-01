@@ -23,5 +23,13 @@ public class tictactoetest {
 		assertEquals('O', ttt.turn);
 	}
 	
+	@Test
+	public void testCMPPossibleMove() throws Exception
+	{
+		tictactoe ttt = new tictactoe().move(7).move(5).move(8);
+		assertArrayEquals(new Integer[] {0, 1, 2, 3, 4, 6}, ttt.possibleCMPMove());
+		
+	}
+	
 	
 }
