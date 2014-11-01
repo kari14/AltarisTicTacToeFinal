@@ -15,5 +15,13 @@ public class tictactoetest {
 		assertEquals('X', ttt.turn);
 	}
 	
+	@Test
+	public void testMove() throws Exception
+	{
+		tictactoe ttt = new tictactoe().move(1);
+		assertEquals(" X       ", ttt.toString());
+		assertEquals('O', ttt.turn);
+	}
+	
 	
 }
