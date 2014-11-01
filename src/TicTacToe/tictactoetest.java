@@ -7,7 +7,10 @@ import org.junit.Test;
 public class tictactoetest {
 	
 	@Test
-	public void testName() throws Exception {
-		
+	public void testName() throws Exception
+	{
+		tictactoe ttt = new tictactoe();
+		assertEquals(" ", ttt.toString());
+		assertEquals('X', ttt.turn);
 	}
 }
